@@ -121,7 +121,7 @@ a, a:visited, a:link, a:active {
 
 .hero-section {
   height: calc(70vh - var(--header-height));
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   display: flex;
   align-items: center;
   width: 100%;
@@ -156,7 +156,7 @@ a, a:visited, a:link, a:active {
 
 .hero-carousel {
   margin: 0 5rem;
-  width: 75vw;
+  width: 100vw;
   box-shadow: 20px 20px 10px gray;
   aspect-ratio: 1/.7;
   background-size: 100% 100%;
@@ -250,11 +250,11 @@ a, a:visited, a:link, a:active {
 @media (max-width: 1536px) {
 
   .hero-content-greet {
-    margin-left: 1rem;
+    margin-left: 3rem;
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 3.5vw, var(--text-h1));
+    font-size: calc(var(--text-base) + 2.9vw);
   }
 
   .hero-carousel {
@@ -274,11 +274,12 @@ a, a:visited, a:link, a:active {
   }
 
   .hero-content-greet {
-    margin-left: 2rem;
+    margin-left: 1%;
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 4vw, var(--text-h1));
+    font-size: calc(var(--text-base) + 2.8vw);
+    margin-bottom: 10px;
   }
 
   .hero-paragraph {
@@ -286,30 +287,32 @@ a, a:visited, a:link, a:active {
   }
 
   .hero-carousel {
-    margin: 0 2rem;
-    width: 75vw;
+    margin: 0 1rem;
+    max-width: 45vw;
   }
 }
 
 /* lg */
 @media (max-width: 1024px) {
-
+  .header-section {
+    padding: 2rem 1rem 0 1rem;
+    margin-bottom: 2rem;
+  }
 
   .header-title {
-    font-size: calc(var(--text-h5));
+    font-size: calc(var(--text-base) + .5vw);
   }
 
   .header-nav-buttons {
     padding: .5rem 1rem;
-    font-size: calc(var(--text-base) - .4vw);
   }
 
   .hero-content-greet {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   .hero-title {
-    font-size: clamp(2.1rem, 4.4vw, var(--text-h1));
+    font-size: calc(var(--text-base) + 2.7vw);
     margin-bottom: .1rem;
   }
 
@@ -318,7 +321,8 @@ a, a:visited, a:link, a:active {
   }
 
   .hero-carousel {
-    margin: 0 2rem 0 2rem;
+    margin: 0 1rem 0 2rem;
+    width: 75vw;
   }
 }
 
