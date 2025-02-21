@@ -20,7 +20,7 @@ const props = defineProps(['image', 'name', 'category', 'imageAlt', 'link'])
 <style scoped>
 .card {
   width: 100%;
-  height: 100%;
+  height: auto;
   box-shadow: 0px 0px 10px 1px #000000ee;
   border-radius: 5px;
   overflow: hidden;

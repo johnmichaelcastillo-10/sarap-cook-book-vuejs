@@ -16,56 +16,16 @@ import tiktokLogo from './assets/images/tiktok.png'
 
 import CardComponent from './components/CardComponent.vue'
 
-import { ref } from 'vue'
-
-const showSidebar = ref(false)
-
-const toggleSidebar = () => {
-  showSidebar.value = !showSidebar.value
-  console.log(showSidebar.value)
-}
 </script>
 
 <template>
   <header class="header-section">
-    <div class="header-logo-container">
+    <a href="/" class="header-logo">
       <img class="header-logo-image" :src="logo" alt="Sarap Cookbook Logo" />
-      <p class="header-title hide-on-mobile">Sarap Cookbook</p>
-    </div>
-    <nav class="hide-on-mobile">
+      <span class="header-title hide-on-mobile">Sarap Cookbook</span>
+    </a>
+    <nav>
       <ul class="header-nav-items">
-        <li><a class="btn header-nav-buttons" href="/">Home</a></li>
-        <li><a class="btn header-nav-buttons" href="">Recipes</a></li>
-      </ul>
-    </nav>
-    <nav class="header-nav-sidebar" ref="sidebar">
-      <a @click="toggleSidebar">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="40px"
-          viewBox="0 -960 960 960"
-          width="40px"
-          fill="#b39a81"
-          v-if="showSidebar"
-        >
-          <path
-            d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="40px"
-          viewBox="0 -960 960 960"
-          width="40px"
-          fill="#b39a81"
-          v-else
-        >
-          <path
-            d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
-          />
-        </svg>
-      </a>
-      <ul class="header-nav-items-sidebar">
         <li><a class="btn header-nav-buttons" href="/">Home</a></li>
         <li><a class="btn header-nav-buttons" href="">Recipes</a></li>
       </ul>
@@ -86,7 +46,7 @@ const toggleSidebar = () => {
       <div class="hero-carousel"></div>
     </section>
     <section class="categories-section">
-      <h3 class="categories-section-title">Categories</h3>
+      <h2 class="categories-section-title">Categories</h2>
       <div class="categories-section-items">
         <CardComponent
           name="Green Mango Shake"
